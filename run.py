@@ -13,6 +13,17 @@ def get_age():
 
         if age_input_stripped != age_input:
             print("Enter your input without space")
+            continue
+
+        try:
+            age = int(age_input_stripped)
+            if 18 <= age <= 65:
+                print("Your age is valid.")
+                return age
+            else:
+                print("Your age must be between 18 and 65.")
+        except ValueError:
+            print("Invalid input. Please enter an integer.")
 
 # Get the validated age
 user_age = get_age()
