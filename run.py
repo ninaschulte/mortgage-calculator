@@ -100,6 +100,23 @@ def get_money_info():
     print("All your data is valid.")
     return salary, expense, other_expense
 
+class Calculator:
+    """
+    This class consist of all calculations needed to give the user result.
+    Consist of several methods __init__ and come other math methods.
+    """
+
+    def __init__(self, user_age, user_retirement_age, user_salary, user_expense, user_other_expense):
+        self.user_age = user_age
+        self.user_retirement_age = user_retirement_age
+        self.user_salary = user_salary
+        self.user_expense = user_expense
+        self.user_other_expense = user_other_expense
+
+    def calculate_month(self):
+        monthly_invest = self.user_salary - (self.user_expense + self.user_other_expense)
+        return monthly_invest
+
 def main(): 
     """
     This is main function that get all the validated and calculated data in the end.
@@ -114,5 +131,9 @@ def main():
     print("User's salary:", user_salary)
     print("User's expenses:", user_expense)
     print("User's other expenses:", user_other_expense)
+
+    calculator = Calculator(user_age, user_retirement_age, user_salary, user_expense, user_other_expense)
+    user_monthly_investment = calculator.calculate_month()
+    print("Per month you can spend:", user_monthly_investment)
 
 main()
