@@ -27,7 +27,7 @@ def get_age():
 
 def get_age_retirement():
     """
-    Get user age and validate this data.
+    Get user retirement age and validate this data.
     User must be between 18 and 65.
     User should not enter any space before and after.
     User should only enter int and not string data.
