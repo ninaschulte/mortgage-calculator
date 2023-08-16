@@ -51,7 +51,10 @@ def get_age_retirement():
             print("Invalid input. Please enter an integer.")
 
 # Get the validated age
-user_age = get_age()
-print("User's age:", user_age)
-user_retirement_age = get_age_retirement()
-print("User's retirement age:", user_retirement_age)
+def main(): 
+    user_age = get_age()
+    print("User's age:", user_age)
+    user_retirement_age = get_age_retirement()
+    print("User's retirement age:", user_retirement_age)
+
+main()
