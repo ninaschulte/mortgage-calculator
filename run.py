@@ -65,7 +65,7 @@ def get_money_info():
 
         try:
             salary = int(salary_input_stripped)
-            break  # Exit the loop if valid input is received
+            break  
         except ValueError:
             print("Invalid input. Please enter an integer.")
             
@@ -79,7 +79,7 @@ def get_money_info():
 
         try:
             expense = int(expense_input_stripped)
-            break  # Exit the loop if valid input is received
+            break  
         except ValueError:
             print("Invalid input. Please enter an integer.")
 
@@ -93,7 +93,7 @@ def get_money_info():
 
         try:
             other_expense = int(other_expense_input_stripped)
-            break  # Exit the loop if valid input is received
+            break  
         except ValueError:
             print("Invalid input. Please enter an integer.")
 
@@ -143,4 +143,5 @@ def main():
     user_total_investment = calculator.calculate_total()
     print("Your can afford to buy property in:", user_total_investment)
 
+print("Welcome to the Mortgage calculator.\nYou need to type your input without space.\nType only integer.")
 main()
