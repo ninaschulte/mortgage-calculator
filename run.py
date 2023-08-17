@@ -1,14 +1,14 @@
 from colorama import just_fix_windows_console
 
-def get_age():
+def validate_age(prompt):
     """
-    Get user age and validate this data.
-    User must be between 18 and 65.
+    Validate data for age and retirement age.
+    User must be above 18.
     User should not enter any space before and after.
     User should only enter int and not string data.
     """
     while True:
-        age_input = input("Enter your age:")
+        age_input = input(prompt)
         age_input_stripped = age_input.strip() 
 
         if age_input_stripped != age_input:
@@ -17,40 +17,29 @@ def get_age():
 
         try:
             age = int(age_input_stripped)
-            if 18 <= age <= 65:
+            if 18 <= age:
                 print("Your age is valid.")
                 return age
             else:
-                print("Your age must be between 18 and 65.")
+                print("Your age must be above 18.")
         except ValueError:
             print("Invalid input. Please enter an integer.")
 
-def get_age_retirement():
+def get_age():
     """
-    Get user retirement age and validate this data.
-    User must be between 18 and 65.
-    User should not enter any space before and after.
-    User should only enter int and not string data.
+    Funtion to get user input on age and retirement.
+    Above function then validate this data.
     """
-    while True:
-        age_input = input("Enter your retirement age:")
-        age_input_stripped = age_input.strip() 
+    age_data = validate_age("Enter your age:")
+    age_retirement = validate_age("Enter your retirenment age:")
 
-        if age_input_stripped != age_input:
-            print("Enter your input without space")
-            continue
-
-        try:
-            age_retirement = int(age_input_stripped)
-            if 18 <= age_retirement:
-                print("Your age is valid.")
-                return age_retirement
-            else:
-                print("Your age must be between 18 and 65.")
-        except ValueError:
-            print("Invalid input. Please enter an integer.")
+    print("All your data is valid.")
+    return age_data, age_retirement
 
 def validate_user_input(message):
+    """
+    Function to validate user data.
+    """
     while True:
         user_input = input(message)
         user_stripped = user_input.strip()
@@ -66,6 +55,9 @@ def validate_user_input(message):
             print("Invalid input. Please enter an integer.")
 
 def get_money_info():
+    """
+    Function to get the user input.
+    """
     salary = validate_user_input("Enter your nett monthly salary:")
     expense = validate_user_input("Enter your sum of your food, leisure expenses per month:")
     other_expense = validate_user_input("Enter your sum of other expenses (other loans etc.):")
@@ -99,10 +91,10 @@ def main():
     """
     This is main function that get all the validated and calculated data in the end.
     """
-    user_age = get_age()
+    user_age = validate_age("Enter your age:")
     print("User's age:", user_age)
-
-    user_retirement_age = get_age_retirement()
+    
+    user_retirement_age = validate_age("Enter your retirement age:")
     print("User's retirement age:", user_retirement_age)
 
     user_salary, user_expense, user_other_expense = get_money_info()
