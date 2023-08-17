@@ -57,6 +57,7 @@ def validate_user_input(message):
 def get_money_info():
     """
     Function to get the user input.
+    After that data is validated with validate_user_input function.
     """
     salary = validate_user_input("Enter your nett monthly salary:")
     expense = validate_user_input("Enter your sum of your food, leisure expenses per month:")
