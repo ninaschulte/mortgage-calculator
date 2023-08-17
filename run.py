@@ -50,52 +50,25 @@ def get_age_retirement():
         except ValueError:
             print("Invalid input. Please enter an integer.")
 
+def validate_user_input(message):
+    while True:
+        user_input = input(message)
+        user_stripped = user_input.strip()
+
+        if user_stripped != user_input:
+            print("Enter your input without space")
+            continue
+
+        try:
+            data = int(user_stripped)
+            return data  
+        except ValueError:
+            print("Invalid input. Please enter an integer.")
+
 def get_money_info():
-    """
-    Function that will get user input on salary, expenses, and other expenses.
-    Function also validate user input data based on space around and special characters.
-    """
-    while True:
-        salary_input = input("Enter your nett monthly salary:")
-        salary_input_stripped = salary_input.strip()
-
-        if salary_input_stripped != salary_input:
-            print("Enter your input without space")
-            continue
-
-        try:
-            salary = int(salary_input_stripped)
-            break  
-        except ValueError:
-            print("Invalid input. Please enter an integer.")
-            
-    while True:
-        expense_input = input("Enter your sum of your food, leisure expenses per month:")
-        expense_input_stripped = expense_input.strip()
-
-        if expense_input_stripped != expense_input:
-            print("Enter your input without space")
-            continue
-
-        try:
-            expense = int(expense_input_stripped)
-            break  
-        except ValueError:
-            print("Invalid input. Please enter an integer.")
-
-    while True:
-        other_expense_input = input("Enter your sum of other expenses (other loans etc.):")
-        other_expense_input_stripped = other_expense_input.strip()
-
-        if other_expense_input_stripped != other_expense_input:
-            print("Enter your input without space")
-            continue
-
-        try:
-            other_expense = int(other_expense_input_stripped)
-            break  
-        except ValueError:
-            print("Invalid input. Please enter an integer.")
+    salary = validate_user_input("Enter your nett monthly salary:")
+    expense = validate_user_input("Enter your sum of your food, leisure expenses per month:")
+    other_expense = validate_user_input("Enter your sum of other expenses (other loans etc.):")
 
     print("All your data is valid.")
     return salary, expense, other_expense
