@@ -1,3 +1,25 @@
+from blessed import Terminal
+term = Terminal()
+from simple_term_menu import TerminalMenu
+from colorama import Fore, Back, Style, init
+
+
+def print_error(message):
+    """
+    Function that style all error messages with colorama.
+    Style is red background with white letters.
+    """
+    print(Back.RED + Fore.WHITE + message + Style.RESET_ALL)
+
+
+def print_success(message):
+    """
+    Function that style all valid data with colorama.
+    Style is green background with black letters.
+    """
+    print(Back.GREEN + Fore.BLACK + message + Style.RESET_ALL)
+
+
 def validate_age(prompt):
     """
     Validate data for age and retirement age.
@@ -10,18 +32,18 @@ def validate_age(prompt):
         age_input_stripped = age_input.strip()
 
         if age_input_stripped != age_input:
-            print("Enter your input without space\n")
+            print_error("Enter your input without space\n")
             continue
 
         try:
             age = int(age_input_stripped)
             if age >= 18:
-                print("Your age is valid.\n")
+                print_success("Your age is valid.\n")
                 return age
             else:
-                print("Your age must be above 18.\n")
+                print_error("Your age must be above 18.\n")
         except ValueError:
-            print("Invalid input. Please enter an integer.\n")
+            print_error("Invalid input. Please enter an integer.\n")
 
 
 def get_age():
@@ -32,7 +54,7 @@ def get_age():
     age_data = validate_age("Enter your age:\n")
     age_retirement = validate_age("Enter your retirement age:\n")
 
-    print("All your data is valid.\n")
+    print_success("All your data is valid.\n")
     return age_data, age_retirement
 
 
@@ -45,14 +67,14 @@ def validate_user_input(message):
         user_stripped = user_input.strip()
 
         if user_stripped != user_input:
-            print("Enter your input without space\n")
+            print_error("Enter your input without space\n")
             continue
 
         try:
             data = int(user_stripped)
             return data
         except ValueError:
-            print("Invalid input. Please enter an integer.\n")
+            print_error("Invalid input. Please enter an integer.\n")
 
 
 def get_money_info():
@@ -64,7 +86,7 @@ def get_money_info():
     expense = validate_user_input("Enter your sum of food/leisure expenses:\n")
     other_expense = validate_user_input("Enter your sum of other expenses (other loans etc.):\n")
 
-    print("All your data is valid.\n")
+    print_success("All your data is valid.\n")
     return salary, expense, other_expense
 
 
@@ -113,5 +135,7 @@ def main():
     print("You can afford to buy property in:\n", user_total_investment)
 
 
-print("Welcome to the Mortgage calculator.\nYou need to type your input without space.\nType only integer.\n")
+print(term.home + term.clear + term.move_y(term.height // 2))
+print(term.move_x(0) + term.black_on_darkkhaki("Welcome to the Mortgage calculator.\nEnter only integer.\nNo space.No special characters.\n"))
 main()
+
