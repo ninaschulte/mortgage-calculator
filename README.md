@@ -18,7 +18,10 @@ Calculator return to the user sum
 
 ## Bugs
 ### Validate data on money input fields
-I have in the code three money inputs that needs to be validated. And in my first version of the code I validated all three inputs through one while loop. The problem here was that the error messages didn´t appear and in case of the error, terminal just display again this question. ![Image Alt Text](documentation/first_version.png)
-Then I started to think further how to solve this and I created three seperate while loops in one function. This solved the problem of error message displaying. But according to the best practises that I learned on Code Institute this was not the best because the best is to have a small function. ![Image Alt Text](documentation/second_version.png)
-After that I reasearched on the internet how to solve this problem and I found some (credits stated in the credit section) solutions. And here is the end result of refactoring the code to the final stage. ![Image Alt Text](documentation/third_version.png)
+I have a code with three money inputs that need to be validated. In my first version of the code, I attempted to validate all three inputs through one while loop. The issue here was that the error messages didn't appear, and in case of an error, the terminal just displayed the same question again. ![Image Alt Text](documentation/first_version.png)
+Then I started to think about how to solve this, and I created three separate while loops within a single function. This resolved the problem of error messages not displaying. However, according to the best practices that I learned at Code Institute, this wasn't the optimal approach, as it's recommended to have small functions. ![Image Alt Text](documentation/second_version.png)
+After that I was trying out different approaches how to make this code shorter and also readable and I created two different functions out of it. ![Image Alt Text](documentation/third_version.png)
 
+## Credits
+- For colours in terminal, I used [colorama]([https://pypi.org/project/colorama/](https://www.programcreek.com/python/?CodeExample=print+success)https://www.programcreek.com/python/?CodeExample=print+success) and [blessed](https://pypi.org/project/blessed/)
+- For validating sections I found the following material: [Python tutorials on Errors](https://docs.python.org/3/tutorial/errors.html), [Youtube totorial]([[https://pypi.org/project/colorama/](https://www.programcreek.com/python/?CodeExample=print+success)https://www.programcreek.com/python/?CodeExample=print+success](https://www.youtube.com/watch?v=LUWyA3m_-r0&t=644s)https://www.youtube.com/watch?v=LUWyA3m_-r0&t=644s)
