@@ -1,5 +1,7 @@
 from simple_term_menu import TerminalMenu
 from colorama import Fore, Back, Style, init
+import os
+import emoji
 from blessed import Terminal
 term = Terminal()
 
@@ -59,9 +61,7 @@ def get_age():
 
 
 def validate_user_input(message):
-    """
-    Function to validate user data.
-    """
+    """Function to validate user data."""
     while True:
         user_input = input(message)
         user_stripped = user_input.strip()
@@ -77,14 +77,21 @@ def validate_user_input(message):
             print_error("Invalid input. Please enter an integer.\n")
 
 
+def display_salary(salary):
+    if salary > 20000:
+        print("Ufff you are rich 😜")
+
+
 def get_money_info():
     """
     Function to get the user input.
     After that data is validated with the validate_user_input function.
     """
-    salary = validate_user_input("Enter your nett monthly salary:\n")
-    expense = validate_user_input("Enter your sum of food/leisure expenses:\n")
-    other_expense = validate_user_input("Enter your sum of other expenses (other loans etc.):\n")
+    salary = validate_user_input("Enter your nett monthly salary(€):\n")
+    expense = validate_user_input("Enter your sum of food/leisure expenses(€):\n")
+    other_expense = validate_user_input("Enter your sum of other expenses (other loans etc.)(€):\n")
+
+    display_salary(salary)
 
     print_success("All your data is valid.\n")
     return salary, expense, other_expense
@@ -92,11 +99,14 @@ def get_money_info():
 
 class Calculator:
     """
-    This class consists of all calculations needed to give the user result.
-    Consists of several methods __init__ and some other math methods.
+    This class consists of all calculations 
+    needed to give the user result. Consists of several methods 
+    __init__ and some other math methods.
     """
 
-    def __init__(self, user_age, user_retirement_age, user_salary, user_expense, user_other_expense):
+    def __init__(
+        self, user_age, user_retirement_age, user_salary, user_expense, user_other_expense
+        ):
         self.user_age = user_age
         self.user_retirement_age = user_retirement_age
         self.user_salary = user_salary
@@ -109,30 +119,47 @@ class Calculator:
 
     def calculate_total(self):
         monthly_invest = self.calculate_month()
-        total_invest = ((self.user_retirement_age - self.user_age) * 12) * monthly_invest
+        total_invest = (
+            (self.user_retirement_age - self.user_age) * 12) * monthly_invest
         return total_invest
 
 
+def clear_screen():
+    """this function clears the screen"""
+    os.system('cls' if os.name == 'nt' else 'clear')
+
+
+#ef show_menu():
+    o#ptions = ["rules", "calculator"]
+    t#erminal_menu = TerminalMenu(options)
+    m#enu_entry_ind'ex = terminal_menu.show()
+    #print(f"You have selected {options[menu_entry_index]}!")
+    
+    #if __name__ == "__main__":
+    #else 
+    
+
 def main():
     """
-    This is the main function that gets all the validated and calculated data in the end.
+    This is the main function that gets all 
+    the validated and calculated data in the end.
     """
-    user_age = validate_age("Enter your age:\n")
+    user_age = validate_age("Enter your age(must be above 18):\n")
     print("User's age:\n", user_age)
 
     user_retirement_age = validate_age("Enter your retirement age:\n")
     print("User's retirement age:\n", user_retirement_age)
 
     user_salary, user_expense, user_other_expense = get_money_info()
-    print("User's salary:\n", user_salary)
-    print("User's expenses:\n", user_expense)
-    print("User's other expenses:\n", user_other_expense)
+    print("User's salary(€):\n", user_salary)
+    print("User's expenses(€):\n", user_expense)
+    print("User's other expenses(€):\n", user_other_expense)
 
     calculator = Calculator(user_age, user_retirement_age, user_salary, user_expense, user_other_expense)
     user_monthly_investment = calculator.calculate_month()
-    print("Per month you can spend:\n", user_monthly_investment)
+    print("Per month you can invest(€):\n", user_monthly_investment)
     user_total_investment = calculator.calculate_total()
-    print("You can afford to buy property in:\n", user_total_investment)
+    print("In total you can spend(€):\n", user_total_investment)
 
 
 print(term.home + term.clear + term.move_y(term.height // 2))
