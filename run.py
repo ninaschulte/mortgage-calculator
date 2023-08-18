@@ -1,7 +1,7 @@
-from blessed import Terminal
-term = Terminal()
 from simple_term_menu import TerminalMenu
 from colorama import Fore, Back, Style, init
+from blessed import Terminal
+term = Terminal()
 
 
 def print_error(message):
@@ -138,4 +138,3 @@ def main():
 print(term.home + term.clear + term.move_y(term.height // 2))
 print(term.move_x(0) + term.black_on_darkkhaki("Welcome to the Mortgage calculator.\nEnter only integer.\nNo space.No special characters.\n"))
 main()
-
