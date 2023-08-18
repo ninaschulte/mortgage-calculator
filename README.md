@@ -15,6 +15,8 @@ Calculator ask users for three additional inputs: salary, expenses and other exp
 Calculator return to the user sum
 
 ## Test
+### PEP3 validator
+### Manual testing
 
 ## Bugs
 ### Validate data on money input fields
