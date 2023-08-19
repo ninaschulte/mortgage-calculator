@@ -106,16 +106,19 @@ class Calculator:
         self.user_other_expense = user_other_expense
 
     def calculate_month(self):
+        """Calculate how much you can invest per month"""
         monthly_invest = self.user_salary - (self.user_expense + self.user_other_expense)
         return monthly_invest
 
     def calculate_total(self):
+        """Calculate total investment"""
         monthly_invest = self.calculate_month()
         total_invest = (
             (self.user_retirement_age - self.user_age) * 12) * monthly_invest
         return total_invest
      
     def calculate_total_years(self):
+        """Calculate in how many years you need to pay off total investment"""
         total_years = self.user_retirement_age - self.user_age
         return total_years
 
