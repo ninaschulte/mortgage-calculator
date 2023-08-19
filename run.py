@@ -1,6 +1,6 @@
 from simple_term_menu import TerminalMenu
 from colorama import Fore, Back, Style, init
-import os
+import os,time,sys
 import emoji
 from blessed import Terminal
 term = Terminal()
@@ -15,16 +15,15 @@ def show_menu():
         print("Here are the rules:\n")
         print("Don´t use special characters.\nType without white space.\n")
         go_back()
-        # Print your rules text here
     elif menu_entry_index == 1:
-        # Run the calculator part here
-        main()  # Call your main calculator logic
+        main()  
         go_back()
     else:
         print("Exit")
 
 
 def go_back():
+    """Function that simply return user to the menu."""
     terminal_menu = TerminalMenu(["go back"], accept_keys=("enter", "alt-d", "ctrl-i"))
     menu_entry_index = terminal_menu.show()
     print(terminal_menu.chosen_accept_key)
@@ -38,16 +37,6 @@ def go_back():
 def clear_screen():
     """this function clears the screen"""
     os.system('cls' if os.name == 'nt' else 'clear')
-    
-
-
-#def go_back():
-    #terminal_menu = TerminalMenu(["go_back"], accept_keys=("enter", "alt-d", "ctrl-i"))
-    #menu_entry_index = terminal_menu.show()
-    #print(terminal_menu.chosen_accept_key)
-
-    #if menu_entry_index == 0:
-    #show_menu()
 
 
 def print_error(message):
@@ -177,6 +166,16 @@ class Calculator:
         return total_years
 
 
+def typewriter(message):
+    for char in message:
+        sys.stdout.write(char)
+        sys.stdout.flush()
+        time.sleep(0.1)
+
+def welcome_message():
+    typemessage = typewriter("☠️ ☠️ ☠️ Welcome to the best mortgage calculator in the universe. ☠️ ☠️ ☠️\n")
+
+
 def main():
     """
     This is the main function that gets all 
@@ -201,7 +200,6 @@ def main():
     user_total_years = calculator.calculate_total_years()
     print("You will pay off in (years):\n", user_total_years)
 
-print(term.home + term.clear + term.move_y(term.height // 2))
-print(term.move_x(0) + term.black_on_darkkhaki("Welcome to the Mortgage calculator.\n"))
+welcome_message()
 show_menu()
 main()
