@@ -86,6 +86,10 @@ def get_money_info():
     expense = validate_user_input("Enter your sum of food/leisure expenses(€):\n")
     other_expense = validate_user_input("Enter your sum of other expenses (other loans etc.)(€):\n")
 
+    if expense + other_expense > salary:
+        print_error("Sorry, you can't afford to buy anything.😐\n")
+        return None, expense, other_expense
+
     return salary, expense, other_expense
 
 
@@ -153,6 +157,9 @@ def main():
     print("User's salary(€):\n", user_salary)
     print("User's expenses(€):\n", user_expense)
     print("User's other expenses(€):\n", user_other_expense)
+
+    if user_salary is None:
+        return
 
     calculator = Calculator(user_age, user_retirement_age, user_salary, user_expense, user_other_expense)
     user_monthly_investment = calculator.calculate_month()
