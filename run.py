@@ -197,13 +197,13 @@ def main():
     if user_salary is not None and (user_expense + user_other_expense) <= user_salary:
         calculator = Calculator(user_age, user_retirement_age, user_salary, user_expense, user_other_expense)
         user_monthly_investment = calculator.calculate_month()
-        print("Per month you can invest (€):", user_monthly_investment)
+        print("Per month you can invest (€):\n", user_monthly_investment)
         user_total_investment = calculator.calculate_total()
-        print("In total you can spend for your new home (€):", user_total_investment)
+        print("In total you can spend for your new home (€):\n", user_total_investment)
         user_total_years = calculator.calculate_total_years()
-        print("You will pay off in (years):", user_total_years)
+        print("You will pay off in (years):\n", user_total_years)
     else:
-        print_error("Sorry, you can't afford to buy anything. 😐")
+        print_error("Sorry, you can't afford to buy anything. 😐\n")
 
 welcome_message()
 show_menu()
