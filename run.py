@@ -111,17 +111,23 @@ class Calculator:
 
     def calculate_month(self):
         """Calculate how much you can invest per month"""
+        if self.user_salary is None:
+            return None
         monthly_invest = self.user_salary - (self.user_expense + self.user_other_expense)
         return monthly_invest
 
     def calculate_total(self):
         """Calculate total investment"""
+        if self.user_salary is None:
+            return None
         monthly_invest = self.calculate_month()
         total_invest = (
             (self.user_retirement_age - self.user_age) * 12) * monthly_invest
         return total_invest
      
     def calculate_total_years(self):
+        if self.user_salary is None:
+            return None
         """Calculate in how many years you need to pay off total investment"""
         total_years = self.user_retirement_age - self.user_age
         return total_years
@@ -158,9 +164,6 @@ def main():
     print("User's expenses(€):\n", user_expense)
     print("User's other expenses(€):\n", user_other_expense)
 
-    if user_salary is None:
-        return
-
     calculator = Calculator(user_age, user_retirement_age, user_salary, user_expense, user_other_expense)
     user_monthly_investment = calculator.calculate_month()
     print("Per month you can invest(€):\n", user_monthly_investment)
@@ -171,5 +174,5 @@ def main():
 
 
 print(term.home + term.clear + term.move_y(term.height // 2))
-print(term.move_x(0) + term.black_on_darkkhaki("Welcome to the Mortgage calculator.\nEnter only integer.\nNo space.No special characters.\n"))
+print(term.move_x(0) + term.black_on_darkkhaki("Welcome to the Mortgage calculator.\n"))
 main()
