@@ -43,7 +43,7 @@ def print_error(message):
     Function that style all error messages with colorama.
     Style is red background with white letters.
     """
-    print(Back.RED + Fore.WHITE + message + Style.RESET_ALL)
+    print(Fore.RED + message + Style.RESET_ALL)
 
 
 def print_success(message):
@@ -51,7 +51,7 @@ def print_success(message):
     Function that style all valid data with colorama.
     Style is green background with black letters.
     """
-    print(Back.GREEN + Fore.BLACK + message + Style.RESET_ALL)
+    print(Fore.GREEN + message + Style.RESET_ALL)
 
 
 def validate_age(prompt):
