@@ -6,6 +6,50 @@ from blessed import Terminal
 term = Terminal()
 
 
+def show_menu():
+    terminal_menu = TerminalMenu(["rules", "calculator"], accept_keys=("enter", "alt-d", "ctrl-i"))
+    menu_entry_index = terminal_menu.show()
+
+    if menu_entry_index == 0:
+        # Show rules
+        print("Here are the rules:\n")
+        print("Don´t use special characters.\nType without white space.\n")
+        go_back()
+        # Print your rules text here
+    elif menu_entry_index == 1:
+        # Run the calculator part here
+        main()  # Call your main calculator logic
+        go_back()
+    else:
+        print("Exit")
+
+
+def go_back():
+    terminal_menu = TerminalMenu(["go back"], accept_keys=("enter", "alt-d", "ctrl-i"))
+    menu_entry_index = terminal_menu.show()
+    print(terminal_menu.chosen_accept_key)
+    clear_screen()
+    
+    if menu_entry_index == 0:
+        # show rules
+        show_menu()
+
+
+def clear_screen():
+    """this function clears the screen"""
+    os.system('cls' if os.name == 'nt' else 'clear')
+    
+
+
+#def go_back():
+    #terminal_menu = TerminalMenu(["go_back"], accept_keys=("enter", "alt-d", "ctrl-i"))
+    #menu_entry_index = terminal_menu.show()
+    #print(terminal_menu.chosen_accept_key)
+
+    #if menu_entry_index == 0:
+    #show_menu()
+
+
 def print_error(message):
     """
     Function that style all error messages with colorama.
@@ -133,21 +177,6 @@ class Calculator:
         return total_years
 
 
-def clear_screen():
-    """this function clears the screen"""
-    os.system('cls' if os.name == 'nt' else 'clear')
-
-
-#ef show_menu():
-    o#ptions = ["rules", "calculator"]
-    t#erminal_menu = TerminalMenu(options)
-    m#enu_entry_ind'ex = terminal_menu.show()
-    #print(f"You have selected {options[menu_entry_index]}!")
-    
-    #if __name__ == "__main__":
-    #else 
-    
-
 def main():
     """
     This is the main function that gets all 
@@ -172,7 +201,7 @@ def main():
     user_total_years = calculator.calculate_total_years()
     print("You will pay off in (years):\n", user_total_years)
 
-
 print(term.home + term.clear + term.move_y(term.height // 2))
 print(term.move_x(0) + term.black_on_darkkhaki("Welcome to the Mortgage calculator.\n"))
+show_menu()
 main()
