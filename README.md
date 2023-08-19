@@ -1,9 +1,19 @@
 # Mortgage Calculator
 
-This is a mortgage calculator that estimates the amount of money you can afford to spend or borrow as a loan. Please note that these calculations are simplified and a real mortgage calculator would need to consider additional factors, such as taxes and fees.
+This is a mortgage calculator that estimates the amount of money you can afford to spend or borrow as a loan. 
 
-Link to the Heroku deployed app: [https://ninaschulte-mortgagecalculator-4bb5d57d1e7f.herokuapp.com/](https://ninaschulte-mortgagecalculator-4bb5d57d1e7f.herokuapp.com/)
+*Please note that these calculations are simplified and a real mortgage calculator would need to consider additional factors, such as taxes and fees.
 
+Here you can view the project. [LINK](https://ninaschulte-mortgagecalculator-4bb5d57d1e7f.herokuapp.com/)
+## User stories
+| ID | User Stories |
+|----|--------------|
+| 1  | As a user, I want to see a welcome message so that I know the purpose of this program. |
+| 2  | As a user, I want to see rules, so that I can decide whether to continue with my calculations. |
+| 3  | As a user, I want to see where I can start with my mortgage calculator. |
+| 4  | As a user, I want to see an error message when my input is incorrect. |
+| 5  | As a user, I want to see a success message when my data is valid. |
+| 6  | As a user, I want to see final calculations so that I understand how much money I can invest. |
 ## Features
 ### Welcome message
 Welcome message with some basic rules, what kind of data will be only accepted for further calculations.
