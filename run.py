@@ -11,9 +11,8 @@ def show_menu():
     menu_entry_index = terminal_menu.show()
 
     if menu_entry_index == 0:
-        # Show rules
         print("Here are the rules:\n")
-        print("Don´t use special characters.\nType without white space.\n")
+        print("Don´t use special characters.\nType without white space.\nEnter value in €.\n")
         go_back()
     elif menu_entry_index == 1:
         main()  
@@ -30,7 +29,6 @@ def go_back():
     clear_screen()
     
     if menu_entry_index == 0:
-        # show rules
         welcome_message()
         show_menu()
 
@@ -121,7 +119,7 @@ def get_money_info():
     other_expense = validate_user_input("Enter your sum of other expenses (other loans etc.)(€):\n")
 
     if expense + other_expense > salary:
-        print_error("Sorry, you can't afford to buy anything.😐\n")
+        #print_error("Sorry, you can't afford to buy anything.😐\n")
         return None, expense, other_expense
 
     return salary, expense, other_expense
@@ -196,13 +194,16 @@ def main():
     print("User's expenses(€):\n", user_expense)
     print("User's other expenses(€):\n", user_other_expense)
 
-    calculator = Calculator(user_age, user_retirement_age, user_salary, user_expense, user_other_expense)
-    user_monthly_investment = calculator.calculate_month()
-    print("Per month you can invest(€):\n", user_monthly_investment)
-    user_total_investment = calculator.calculate_total()
-    print("In total you can spend(€):\n", user_total_investment)
-    user_total_years = calculator.calculate_total_years()
-    print("You will pay off in (years):\n", user_total_years)
+    if user_salary is not None and (user_expense + user_other_expense) <= user_salary:
+        calculator = Calculator(user_age, user_retirement_age, user_salary, user_expense, user_other_expense)
+        user_monthly_investment = calculator.calculate_month()
+        print("Per month you can invest (€):", user_monthly_investment)
+        user_total_investment = calculator.calculate_total()
+        print("In total you can spend for your new home (€):", user_total_investment)
+        user_total_years = calculator.calculate_total_years()
+        print("You will pay off in (years):", user_total_years)
+    else:
+        print_error("Sorry, you can't afford to buy anything. 😐")
 
 welcome_message()
 show_menu()
