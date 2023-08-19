@@ -104,6 +104,7 @@ def validate_user_input(message):
 
         try:
             data = int(user_stripped)
+            print_success("Your data is valid.")
             return data
         except ValueError:
             print_error("Invalid input. Please enter an integer.\n")
@@ -115,11 +116,10 @@ def get_money_info():
     After that data is validated with the validate_user_input function.
     """
     salary = validate_user_input("Enter your nett monthly salary(€):\n")
-    expense = validate_user_input("Enter your sum of food/leisure expenses(€):\n")
+    expense = validate_user_input("Enter your sum of your disposal income(€):\n")
     other_expense = validate_user_input("Enter your sum of other expenses (other loans etc.)(€):\n")
 
     if expense + other_expense > salary:
-        #print_error("Sorry, you can't afford to buy anything.😐\n")
         return None, expense, other_expense
 
     return salary, expense, other_expense
