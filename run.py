@@ -160,20 +160,23 @@ class Calculator:
         return total_invest
      
     def calculate_total_years(self):
+        """Calculate in how many years you need to pay off total investment"""
         if self.user_salary is None:
             return None
-        """Calculate in how many years you need to pay off total investment"""
         total_years = self.user_retirement_age - self.user_age
         return total_years
 
 
 def typewriter(message):
+    """Function for special effect for welcome message"""
     for char in message:
         sys.stdout.write(char)
         sys.stdout.flush()
         time.sleep(0.1)
 
+
 def welcome_message():
+    """Function that exist only to display welcome message"""
     typemessage = typewriter("☠️ ☠️ ☠️ Welcome to the best mortgage calculator in the universe. ☠️ ☠️ ☠️\n")
 
 
