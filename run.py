@@ -31,6 +31,7 @@ def go_back():
     
     if menu_entry_index == 0:
         # show rules
+        welcome_message()
         show_menu()
 
 
