@@ -39,11 +39,11 @@ def validate_age(prompt):
 
         try:
             age = int(age_input_stripped)
-            if age >= 18:
+            if 18 <= age <= 122:
                 print_success("Your age is valid.\n")
                 return age
             else:
-                print_error("Your age must be above 18.\n")
+                print_error("Your age must be above 18 and less then 122.\n")
         except ValueError:
             print_error("Invalid input. Please enter an integer.\n")
 
@@ -77,11 +77,6 @@ def validate_user_input(message):
             print_error("Invalid input. Please enter an integer.\n")
 
 
-def display_salary(salary):
-    if salary > 20000:
-        print("Ufff you are rich 😜")
-
-
 def get_money_info():
     """
     Function to get the user input.
@@ -91,9 +86,6 @@ def get_money_info():
     expense = validate_user_input("Enter your sum of food/leisure expenses(€):\n")
     other_expense = validate_user_input("Enter your sum of other expenses (other loans etc.)(€):\n")
 
-    display_salary(salary)
-
-    print_success("All your data is valid.\n")
     return salary, expense, other_expense
 
 
@@ -122,6 +114,10 @@ class Calculator:
         total_invest = (
             (self.user_retirement_age - self.user_age) * 12) * monthly_invest
         return total_invest
+     
+    def calculate_total_years(self):
+        total_years = self.user_retirement_age - self.user_age
+        return total_years
 
 
 def clear_screen():
@@ -160,6 +156,8 @@ def main():
     print("Per month you can invest(€):\n", user_monthly_investment)
     user_total_investment = calculator.calculate_total()
     print("In total you can spend(€):\n", user_total_investment)
+    user_total_years = calculator.calculate_total_years()
+    print("You will pay off in (years):\n", user_total_years)
 
 
 print(term.home + term.clear + term.move_y(term.height // 2))
