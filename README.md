@@ -29,10 +29,16 @@ Calculator ask users for three additional inputs: salary, expenses and other exp
 ![Image Alt Text](./documentation/error.png)
 ### Outcome result
 Calculator return to the user sum
+## Technologies Used
+### Languages:
+- Python: serves as the project's foundation, guiding and shaping all aspects of the application's behavior.
 
-## Test
-### PEP3 validator
-### Manual testing
+- JavaScript: contributes the essential start script, enabling the execution of the Code Institute's mock terminal within the browser environment.
+
+- HTML: employed in crafting the fundamental elements integral to constructing the simulated terminal experience within the browser.
+## Frameworks/Libraries, Programmes and Tools
+### Python modules/packages:
+#### Standard library imports:
 
 ## Bugs
 ### Validate data on money input fields
