@@ -83,7 +83,7 @@ def get_money_info():
     return salary, expense, other_expense
 
 ```
-2. Then I started to think about how to solve this, and I created three separate while loops within a single function. This resolved the problem of error messages not displaying. However, according to the best practices that I learned at Code Institute, this wasn't the optimal approach, as it's recommended to have small functions.
+2. Then I created three separate while loops within a single function. This resolved the problem of error messages not displaying. However, according to the best practices that I learned at Code Institute, this wasn't the optimal approach, as it's recommended to have small functions.
 ```python
 def get_money_info():
     """

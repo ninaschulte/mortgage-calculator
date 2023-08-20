@@ -125,7 +125,7 @@ def get_money_info():
     other_expense = validate_user_input("Enter your sum of other expenses (other loans etc.)(€):\n")
 
     if expense + other_expense > salary:
-        return None, expense, other_expense
+        return salary, expense, other_expense
 
     return salary, expense, other_expense
 
@@ -200,8 +200,9 @@ def main():
     print("User's other expenses(€):\n", user_other_expense)
 
     if user_salary is not None and (
-        user_expense + user_other_expense) 
-        <= user_salary:
+    user_expense + user_other_expense
+    ) <= user_salary:
+
         calculator = Calculator(
             user_age, 
             user_retirement_age, 
