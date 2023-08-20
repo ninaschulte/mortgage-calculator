@@ -37,7 +37,6 @@ def go_back():
         ["go back"], accept_keys=("enter", "alt-d", "ctrl-i")
         )
     menu_entry_index = terminal_menu.show()
-    print(terminal_menu.chosen_accept_key)
     clear_screen()
 
     if menu_entry_index == 0:
@@ -150,8 +149,6 @@ def get_money_info():
         )
 
     if expense + other_expense > salary:
-        return salary, expense, other_expense
-
     return salary, expense, other_expense
 
 
@@ -163,11 +160,11 @@ class Calculator:
     """
 
     def __init__(self, user_a, user_ret_a, user_sal, user_exp, user_other_exp):
-        self.user_a = user_a
-        self.user_ret_a = user_ret_a
-        self.user_sal = user_sal
-        self.user_exp = user_exp
-        self.user_other_exp = user_other_exp
+        self.user_a = user_a #user age
+        self.user_ret_a = user_ret_a #user retirement age
+        self.user_sal = user_sal #user salary
+        self.user_exp = user_exp #user expenses (disposal income (€))
+        self.user_other_exp = user_other_exp #other expenses
 
     def calculate_month(self):
         """Calculate how much you can invest per month"""
@@ -238,15 +235,15 @@ def main():
             user_sal, user_exp, 
             user_other_exp
         )
-        user_monthly_investment = calculator.calculate_month()
+        user_monthly_investment = calculator.calculate_month()         
         print("Per month you can invest (€):\n", user_monthly_investment)
         user_total_investment = calculator.calculate_total()
         print(
-            "Per month you can invest (€):\n", user_total_investment
+            "Your total investment (€):\n", user_total_investment
             )
         user_total_years = calculator.calculate_total_years()
         print("You will pay off in (years):\n", user_total_years)
-    else:
+    else: #display error message in case of bigger expenses then salary
         print_error("Sorry, you can't afford to buy anything.\n")
 
 
