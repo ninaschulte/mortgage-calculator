@@ -21,14 +21,21 @@ The flowchart represents the logic of the application:
 ### Welcome message
 Welcome message with some basic rules, what kind of data will be only accepted for further calculations.
 ![Image Alt Text](./documentation/welcome.png)
+### Rulea
+Explain to the customer what is this program about and a set of rules.
+![Image Alt Text](./documentation/rules.png)
 ### Age input and Age retirement input
 Calculator ask users to add age and retirement age
-![Image Alt Text](./documentation/validation.png)
+![Image Alt Text](./documentation/age_val.png)
 ### Salary, expenses and other expenses input
-Calculator ask users for three additional inputs: salary, expenses and other expenses input.
-![Image Alt Text](./documentation/error.png)
-### Outcome result
-Calculator return to the user sum
+Calculator ask users for three additional inputs: salary, expenses and other expenses input. In case sum of expenses is bigger then actual salary, program return error that user can´t buy any property.
+![Image Alt Text](./documentation/expense_error.png)
+### Result
+Once your data are validated, result page is presented to the user with three calculated results:
+- your monthly amount that you can spend on investment,
+- total investement through out all the years,
+- in how many years you you will pay off this amount.
+![Image Alt Text](./documentation/result.png)
 ## Technologies Used
 ### Languages:
 - Python: serves as the project's foundation, guiding and shaping all aspects of the application's behavior.
