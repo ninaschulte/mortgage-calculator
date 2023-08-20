@@ -62,6 +62,19 @@ Upon successful validation of the input data, the program presents the user with
 - [GitHub](https://github.com/) was used to host the website's code.
 - [Heroku](https://devcenter.heroku.com/articles/getting-started-with-python#set-up) was used to deploy the project.
 ## Testing
+### Manual testing
+| Test Scenario | Pass/Fail |
+|---------------|-----------|
+| Run the app and view the title, menu: rules, calculator. | Pass |
+| Tap on the "rules" tab and view the text. | Pass |
+| Tap on the "back button" and view the menu. | Pass |
+| Tap on "calculator" to view the application title and the first question. | Pass |
+| Enter age and retirement data; confirm that the view displays data as valid in green. | Pass |
+| Enter salary input, your expenses, and other expenses; ensure that the view shows data as valid text in green. | Pass |
+| View the result and the three calculations: monthly investment, total investment, and years to pay off. | Pass |
+| Tap the "go back" button and click on "calculator." | Pass |
+| Test for errors: enter input with space, special character; for age, validate the age and confirm that the view displays data as not valid in red. | Pass |
+| Also, enter expenses greater than salary and observe the view showing an error that you can't afford anything. | Pass |
 ### PEP3
 ### Bugs
 #### Validate data on money input fields
