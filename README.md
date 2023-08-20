@@ -211,12 +211,13 @@ def get_money_info():
 13. Wait for the completion:
     ![Image Alt Text](./documentation/wait_completion.png)
 14. Click on "View" to launch the application inside a web page:
-    ![Image Alt Text](./documentation/wait_completion.png)
-    
-
+    ![Image Alt Text](./documentation/successfuldeploy.png)
 ## Credits
-- For colours in terminal, I used [colorama]([https://pypi.org/project/colorama/](https://www.programcreek.com/python/?CodeExample=print+success)https://www.programcreek.com/python/?CodeExample=print+success) and [blessed](https://pypi.org/project/blessed/)
-- For validating sections I found the following material: [Python tutorials on Errors](https://docs.python.org/3/tutorial/errors.html), [Youtube totorial]([[https://pypi.org/project/colorama/](https://www.programcreek.com/python/?CodeExample=print+success)https://www.programcreek.com/python/?CodeExample=print+success](https://www.youtube.com/watch?v=LUWyA3m_-r0&t=644s)https://www.youtube.com/watch?v=LUWyA3m_-r0&t=644s)
-- typewrite style https://www.youtube.com/watch?v=2h8e0tXHfk0
+- For colors in the terminal, I used [colorama](https://pypi.org/project/colorama/).
+- For validating [Python tutorials on Errors](https://docs.python.org/3/tutorial/errors.html) and a helpful [YouTube tutorial](https://www.youtube.com/watch?v=LUWyA3m_-r0&t=644s).
+- Typewrite style is covered in this [YouTube tutorial](https://www.youtube.com/watch?v=2h8e0tXHfk0).
+- If statements are explained in the [Python tutorial on if statements](https://docs.python.org/3/tutorial/controlflow.html#if-statements).
+- For space validation, you can refer to the [Python tutorial on strip()](https://docs.python.org/3/library/stdtypes.html#str.strip).
+- For many small details, you might find the [Python W3Schools resource](https://www.w3schools.com/python/) helpful.
 ### Acknowledgements
 I am truly grateful for the unwavering support and valuable feedback provided by my mentor [Julia Konovalova](https://github.com/IuliiaKonovalova) throughout my journey. Julia Konovalova guidance has been instrumental in shaping my growth and progress.
