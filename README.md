@@ -187,7 +187,7 @@ def get_money_info():
 ## Deployment 
 - The program was deployed to [Heroku]([[https://pypi.org/project/colorama/](https://dashboard.codeanywhere.com/)](https://devcenter.heroku.com/articles/getting-started-with-python#set-up)).
 - The program can be reached by the [link](https://ninaschulte-mortgagecalculator-4bb5d57d1e7f.herokuapp.com/)
-### Steps launch the application
+### Steps to launch the application
 1. In Codeanywhere, create a list of requirements.txt that project needs to run (all the imports). Run command "Pip3 freeze > requirements.txt". 
 2. Save changes and with command git push, push the files to your repository.
 3. Create a [Heroku](https://dashboard.heroku.com/account) account.
@@ -218,6 +218,7 @@ def get_money_info():
     ![Image Alt Text](./documentation/successfuldeploy.png)
 ## Credits
 - For colors in the terminal, I used [colorama](https://pypi.org/project/colorama/).
+- For menu, I used [Simple Menu](https://pypi.org/project/simple-term-menu/)
 - For validating [Python tutorials on Errors](https://docs.python.org/3/tutorial/errors.html) and a helpful [YouTube tutorial](https://www.youtube.com/watch?v=LUWyA3m_-r0&t=644s).
 - Typewrite style is covered in this [YouTube tutorial](https://www.youtube.com/watch?v=2h8e0tXHfk0).
 - If statements are explained in the [Python tutorial on if statements](https://docs.python.org/3/tutorial/controlflow.html#if-statements).
