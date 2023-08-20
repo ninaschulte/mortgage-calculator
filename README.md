@@ -211,6 +211,7 @@ def get_money_info():
 13. Wait for the completion:
     ![Image Alt Text](./documentation/wait_completion.png)
 14. Click on "View" to launch the application inside a web page:
+    ![Image Alt Text](./documentation/wait_completion.png)
     
 
 ## Credits
