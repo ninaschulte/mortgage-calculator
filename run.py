@@ -156,16 +156,17 @@ def get_money_info():
 class Calculator:
     """
     This class consists of all calculations 
-    needed to give the user result. Consists of several methods 
+    needed to give the user result. 
+    Consists of several methods 
     __init__ and some other math methods.
     """
-
+    
     def __init__(self, user_a, user_ret_a, user_sal, user_exp, user_other_exp):
-        self.user_a = user_a #user age
-        self.user_ret_a = user_ret_a #user retirement age
-        self.user_sal = user_sal #user salary
-        self.user_exp = user_exp #user expenses (disposal income (€))
-        self.user_other_exp = user_other_exp #other expenses
+        self.user_a = user_a  # user age
+        self.user_ret_a = user_ret_a  # user retirement age
+        self.user_sal = user_sal  # user salary
+        self.user_exp = user_exp  # user expenses (disposal income (€))
+        self.user_other_exp = user_other_exp  # other expenses
 
     def calculate_month(self):
         """Calculate how much you can invest per month"""
@@ -244,7 +245,7 @@ def main():
             )
         user_total_years = calculator.calculate_total_years()
         print("You will pay off in (years):\n", user_total_years)
-    else: #display error message in case of bigger expenses then salary
+    else:  # display error message in case of bigger expenses then salary
         print_error("Sorry, you can't afford to buy anything.\n")
 
 
