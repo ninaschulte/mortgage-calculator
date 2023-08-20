@@ -19,24 +19,25 @@ The flowchart represents the logic of the application:
 ![Image Alt Text](./documentation/flowchart.png)
 ## Features
 ### Welcome message
-Welcome message with some basic rules, what kind of data will be only accepted for further calculations.
+A welcome message displays basic rules regarding the accepted data for further calculations.
 ![Image Alt Text](./documentation/welcome.png)
 ### Rules
-Explain to the customer what is this program about and a set of rules.
+An explanation to the user about the purpose of the program and a set of accompanying rules.
 ![Image Alt Text](./documentation/rules.png)
 ### Go back button
-Go back button is present on rules screen and also once user complete the calculator. This button return user to the first page, where user can select again between rules and calculator.
+A "Go back" button is provided on both the rules screen and upon completing the calculator. This button returns the user to the initial page, where they can choose between rules and the calculator.
 ### Age input and Age retirement input
-Calculator ask users to add age and retirement age
+The calculator prompts users to enter their current age and retirement age.
 ![Image Alt Text](./documentation/age_val.png)
 ### Salary, expenses and other expenses input
-Calculator ask users for three additional inputs: salary, expenses and other expenses input. In case sum of expenses is bigger then actual salary, program return error that user can´t buy any property.
+The calculator also prompts users for three additional inputs: salary, regular expenses, and other expenses. If the total expenses exceed the user's salary, the program returns an error indicating that the user cannot afford to buy a property.
 ![Image Alt Text](./documentation/expense_error.png)
 ### Result
-Once your data are validated, result page is presented to the user with three calculated results:
-- your monthly amount that you can spend on investment,
-- total investement through out all the years,
-- in how many years you you will pay off this amount.
+Upon successful validation of the input data, the program presents the user with a results page displaying three calculated values:
+
+The monthly amount available for investment.
+The total investment amount over the years (calculated as user's salary minus the sum of all expenses).
+The number of years required to pay off this investment (calculated as (retirement age - user age) * 12) * monthly amount.
   
 ![Image Alt Text](./documentation/result.png)
 ## Technologies Used
