@@ -1,4 +1,4 @@
-import os,time,sys
+import os, time, sys
 from simple_term_menu import TerminalMenu
 from colorama import Fore, Back, Style, init
 import emoji
@@ -15,7 +15,9 @@ def show_menu():
 
     if menu_entry_index == 0:
         print("Here are the rules:\n")
-        print("Don´t use special characters.\nType without white space.\nEnter value in €.\n")
+        print(
+            "Don´t use special characters.\nType without white space.\nEnter value in €.\n"
+            )
         go_back()
     else:
         main()  
@@ -24,13 +26,17 @@ def show_menu():
 
 def go_back():
     """Function that simply return user to the menu."""
-    terminal_menu = TerminalMenu(["go back"], accept_keys=("enter", "alt-d", "ctrl-i"))
+    terminal_menu = TerminalMenu(
+        ["go back"], accept_keys=("enter", "alt-d", "ctrl-i")
+        )
     menu_entry_index = terminal_menu.show()
     print(terminal_menu.chosen_accept_key)
     clear_screen()
     
     if menu_entry_index == 0:
-        print("☠️ ☠️ ☠️ Welcome to the best mortgage calculator in the universe. ☠️ ☠️ ☠️\n")
+        print(
+            "☠️ Welcome to the best mortgage calculator in the universe. ☠️\n"
+            )
         show_menu()
 
 
@@ -76,7 +82,9 @@ def validate_age(prompt, min_age, max_age):
                 print_success("Your age is valid.\n")
                 return age
             else:
-                print_error(f"Your age must be between {min_age} and {max_age}.\n")
+                print_error(
+                    f"Your age must be between {min_age} and {max_age}.\n"
+                    )
         except ValueError:
             print_error("Invalid input. Please enter an integer.\n")
 
@@ -85,8 +93,12 @@ def get_age():
     Function to get user input on age and retirement.
     Above function then validates this data.
     """
-    age_data = validate_age("Enter your age (must be above 18):\n", 18, 122)
-    age_retirement = validate_age("Enter your retirement age (must be above 40):\n", 40, 122)
+    age_data = validate_age(
+        "Enter your age (must be above 18):\n", 18, 122
+        )
+    age_retirement = validate_age(
+        "Enter your retirement age (must be above 40):\n", 40, 122
+        )
 
     print_success("All your data is valid.\n")
     return age_data, age_retirement
@@ -121,7 +133,9 @@ def get_money_info():
     """
     salary = validate_user_input("Enter your nett monthly salary(€):\n")
     expense = validate_user_input("Enter your sum of your disposal income(€):\n")
-    other_expense = validate_user_input("Enter your sum of other expenses (other loans etc.)(€):\n")
+    other_expense = validate_user_input(
+        "Enter your sum of other expenses (other loans etc.)(€):\n"
+        )
 
     if expense + other_expense > salary:
         return salary, expense, other_expense
@@ -137,7 +151,10 @@ class Calculator:
     """
 
     def __init__(
-        self, user_age, user_retirement_age, user_salary, user_expense, user_other_expense
+        self, user_age, 
+        user_retirement_age, 
+        user_salary, user_expense, 
+        user_other_expense
         ):
         self.user_age = user_age
         self.user_retirement_age = user_retirement_age
@@ -149,7 +166,9 @@ class Calculator:
         """Calculate how much you can invest per month"""
         if self.user_salary is None:
             return None
-        monthly_invest = self.user_salary - (self.user_expense + self.user_other_expense)
+        monthly_invest = self.user_salary - (
+            self.user_expense + self.user_other_expense
+            )
         return monthly_invest
 
     def calculate_total(self):
@@ -179,7 +198,9 @@ def typewriter(message):
 
 def welcome_message():
     """Function that exist only to display welcome message"""
-    typemessage = typewriter("☠️ ☠️ ☠️ Welcome to the best mortgage calculator in the universe. ☠️ ☠️ ☠️\n")
+    typemessage = typewriter(
+        "☠️ Welcome to the best mortgage calculator in the universe. ☠️\n"
+        )
 
 
 def main():
@@ -187,16 +208,20 @@ def main():
     This is the main function that gets all 
     the validated and calculated data in the end.
     """
-    user_age = validate_age("Enter your age(must be above 18):\n", 18, 122)
+    user_age = validate_age(
+        "Enter your age(must be above 18):\n", 18, 122
+        )
     print("Your age:\n", user_age)
 
-    user_retirement_age = validate_age("Enter your retirement age:\n", 40, 122)
+    user_retirement_age = validate_age(
+        "Enter your retirement age:\n", 40, 122
+        )
     print("Your retirement age:\n", user_retirement_age)
 
     user_salary, user_expense, user_other_expense = get_money_info()
-    print("Your salary(€):\n", user_salary)
-    print("Your expenses(€):\n", user_expense)
-    print("Your other expenses(€):\n", user_other_expense)
+    print("Your salary (€):\n", user_salary)
+    print("Sum of your disposal income (€):\n", user_expense)
+    print("Your other expenses (€):\n", user_other_expense)
 
     if user_salary is not None and (
     user_expense + user_other_expense
@@ -211,7 +236,9 @@ def main():
         user_monthly_investment = calculator.calculate_month()
         print("Per month you can invest (€):\n", user_monthly_investment)
         user_total_investment = calculator.calculate_total()
-        print("In total you can spend for your new home (€):\n", user_total_investment)
+        print(
+            "In total you can spend for your new home (€):\n", user_total_investment
+            )
         user_total_years = calculator.calculate_total_years()
         print("You will pay off in (years):\n", user_total_years)
     else:
