@@ -186,9 +186,10 @@ def get_money_info():
 - The program was deployed to [Heroku]([[https://pypi.org/project/colorama/](https://dashboard.codeanywhere.com/)](https://devcenter.heroku.com/articles/getting-started-with-python#set-up)).
 - The program can be reached by the [link](https://ninaschulte-mortgagecalculator-4bb5d57d1e7f.herokuapp.com/)
 ### Steps 
-1. Create a list of requirements.txt that project needs to run (all the imports). Run command "Pip3 freeze > requirements.txt".
-2. Save and push to github.
-3. Open account at Haroku
+1. In Codeanywhere, create a list of requirements.txt that project needs to run (all the imports). Run command "Pip3 freeze > requirements.txt". 
+2. Save changes and with command git push, push the files to your repository.
+3. Create a Heroku account if you don´t already have one here [Heroku]([[https://pypi.org/project/colorama/](https://dashboard.codeanywhere.com/)](https://devcenter.heroku.com/articles/getting-started-with-python#set-up))
+4. Create a new Heroku application on the following page here 
 
 
 ## Credits
