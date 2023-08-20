@@ -188,8 +188,17 @@ def get_money_info():
 ### Steps 
 1. In Codeanywhere, create a list of requirements.txt that project needs to run (all the imports). Run command "Pip3 freeze > requirements.txt". 
 2. Save changes and with command git push, push the files to your repository.
-3. Create a Heroku account if you don´t already have one here [Heroku]([[https://pypi.org/project/colorama/](https://dashboard.codeanywhere.com/)](https://devcenter.heroku.com/articles/getting-started-with-python#set-up))
-4. Create a new Heroku application on the following page here 
+3. Create a Heroku account [Heroku](https://dashboard.heroku.com/account).
+4. Create a new Heroku application on the following page [Heroku - new app](https://dashboard.heroku.com/apps):
+   ![Image Alt Text](./documentation/new_app.png)
+5. Tap on deploy:
+   ![Image Alt Text](./documentation/deploy.png)
+6. Link your GitHub account and connect the application to the repository:
+   ![Image Alt Text](./documentation/connect_github.png)
+7. Tap on Setting:
+   ![Image Alt Text](./documentation/setting.png)
+8. Click on "Add buildpack":
+   ![Image Alt Text](./documentation/node_python.png)
 
 
 ## Credits
