@@ -30,7 +30,7 @@ def go_back():
     clear_screen()
     
     if menu_entry_index == 0:
-        welcome_message()
+        print("☠️ ☠️ ☠️ Welcome to the best mortgage calculator in the universe. ☠️ ☠️ ☠️\n")
         show_menu()
 
 
@@ -189,15 +189,15 @@ def main():
     the validated and calculated data in the end.
     """
     user_age = validate_age("Enter your age(must be above 18):\n")
-    print("User's age:\n", user_age)
+    print("Your age:\n", user_age)
 
     user_retirement_age = validate_age("Enter your retirement age:\n")
-    print("User's retirement age:\n", user_retirement_age)
+    print("Your retirement age:\n", user_retirement_age)
 
     user_salary, user_expense, user_other_expense = get_money_info()
-    print("User's salary(€):\n", user_salary)
-    print("User's expenses(€):\n", user_expense)
-    print("User's other expenses(€):\n", user_other_expense)
+    print("Your salary(€):\n", user_salary)
+    print("Your expenses(€):\n", user_expense)
+    print("Your other expenses(€):\n", user_other_expense)
 
     if user_salary is not None and (
     user_expense + user_other_expense
