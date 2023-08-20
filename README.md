@@ -54,12 +54,13 @@ Upon successful validation of the input data, the program presents the user with
 - [time](https://docs.python.org/3/library/time.html) this module provides various time-related functions.
 - [sys](https://docs.python.org/3/library/sys.html) this module provides access to some variables used or maintained by the interpreter and to functions that interact strongly with the interpreter.
 #### Third-party imports:
-- [Colorama](https://pypi.org/project/colorama/) used to add colors and styles to the project.
+- [Colorama](https://pypi.org/project/colorama/) was used to add colors and styles to the project.
 - [Simple Menu](https://pypi.org/project/simple-term-menu/) was used to implement the menu.
-Other tools:
-- [Codeanywhere]([https://pypi.org/project/colorama/](https://dashboard.codeanywhere.com/)) was used to edit code.
-- [Github]([https://pypi.org/project/colorama/](https://github.com/))Github was used to host the code of the website
-- [Heroku]([[https://pypi.org/project/colorama/](https://dashboard.codeanywhere.com/)](https://devcenter.heroku.com/articles/getting-started-with-python#set-up))Heroku was used to deploy the project
+- [Emoji](https://pypi.org/project/emoji/) was used for emojis.
+#### Other tools:
+- [Codeanywhere](https://dashboard.codeanywhere.com/) was used to edit code.
+- [GitHub](https://github.com/) was used to host the website's code.
+- [Heroku](https://devcenter.heroku.com/articles/getting-started-with-python#set-up) was used to deploy the project.
 ## Testing
 ### PEP3
 ### Bugs
