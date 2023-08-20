@@ -38,7 +38,7 @@ def go_back():
     menu_entry_index = terminal_menu.show()
     print(terminal_menu.chosen_accept_key)
     clear_screen()
-    
+
     if menu_entry_index == 0:
         print(
             "☠️ Welcome to the best mortgage calculator in the universe. ☠️\n"
@@ -161,41 +161,36 @@ class Calculator:
     __init__ and some other math methods.
     """
 
-    def __init__(
-        self, user_age, 
-        user_retirement_age, 
-        user_salary, user_expense, 
-        user_other_expense
-        ):
-        self.user_age = user_age
-        self.user_retirement_age = user_retirement_age
-        self.user_salary = user_salary
-        self.user_expense = user_expense
-        self.user_other_expense = user_other_expense
+    def __init__(self, user_a, user_ret_a, user_sal, user_exp, user_other_exp):
+        self.user_a = user_a
+        self.user_ret_a = user_ret_a
+        self.user_sal = user_sal
+        self.user_exp = user_exp
+        self.user_other_exp = user_other_exp
 
     def calculate_month(self):
         """Calculate how much you can invest per month"""
-        if self.user_salary is None:
+        if self.user_sal is None:
             return None
-        monthly_invest = self.user_salary - (
-            self.user_expense + self.user_other_expense
+        monthly_invest = self.user_sal - (
+            self.user_exp + self.user_other_exp
             )
         return monthly_invest
 
     def calculate_total(self):
         """Calculate total investment"""
-        if self.user_salary is None:
+        if self.user_sal is None:
             return None
         monthly_invest = self.calculate_month()
         total_invest = (
-            (self.user_retirement_age - self.user_age) * 12) * monthly_invest
+            (self.user_ret_a - self.user_a) * 12) * monthly_invest
         return total_invest
-     
+
     def calculate_total_years(self):
         """Calculate in how many years you need to pay off total investment"""
-        if self.user_salary is None:
+        if self.user_sal is None:
             return None
-        total_years = self.user_retirement_age - self.user_age
+        total_years = self.user_ret_a - self.user_a
         return total_years
 
 
@@ -219,30 +214,28 @@ def main():
     This is the main function that gets all 
     the validated and calculated data in the end.
     """
-    user_age = validate_age(
+    user_a = validate_age(
         "Enter your age(must be above 18):\n", 18, 122
         )
-    print("Your age:\n", user_age)
+    print("Your age:\n", user_a)
 
-    user_retirement_age = validate_age(
+    user_ret_a = validate_age(
         "Enter your retirement age:\n", 40, 122
         )
-    print("Your retirement age:\n", user_retirement_age)
+    print("Your retirement age:\n", user_ret_a)
 
-    user_salary, user_expense, user_other_expense = get_money_info()
-    print("Your salary (€):\n", user_salary)
-    print("Sum of your disposal income (€):\n", user_expense)
-    print("Your other expenses (€):\n", user_other_expense)
+    user_sal, user_exp, user_other_exp = get_money_info()
+    print("Your salary (€):\n", user_sal)
+    print("Sum of your disposal income (€):\n", user_exp)
+    print("Your other expenses (€):\n", user_other_exp)
 
-    if user_salary is not None and (
-    user_expense + user_other_expense
-    ) <= user_salary:
+    if user_sal is not None and (user_exp + user_other_exp) <= user_sal:
 
         calculator = Calculator(
-            user_age, 
-            user_retirement_age, 
-            user_salary, user_expense, 
-            user_other_expense
+            user_a, 
+            user_ret_a, 
+            user_sal, user_exp, 
+            user_other_exp
         )
         user_monthly_investment = calculator.calculate_month()
         print("Per month you can invest (€):\n", user_monthly_investment)
@@ -253,7 +246,7 @@ def main():
         user_total_years = calculator.calculate_total_years()
         print("You will pay off in (years):\n", user_total_years)
     else:
-        print_error("Sorry, you can't afford to buy anything. 😐\n")
+        print_error("Sorry, you can't afford to buy anything.\n")
 
 
 welcome_message()
