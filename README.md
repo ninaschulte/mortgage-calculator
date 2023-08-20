@@ -198,8 +198,20 @@ def get_money_info():
 7. Tap on Setting:
    ![Image Alt Text](./documentation/setting.png)
 8. Click on "Add buildpack":
-   ![Image Alt Text](./documentation/node_python.png)
-
+   ![Image Alt Text](./documentation/add_buildpack.png)
+9. Click on "Reveal Config Vars":
+   ![Image Alt Text](./documentation/config.png)
+10. Add 1 new config vars:
+    - Key: PORT Value: 8000
+    - Provided by [Code Institute](https://codeinstitute.net/de/)
+11. Go back to Deploy tab:
+    ![Image Alt Text](./documentation/deploy.png)
+12. Click on "Deploy Branch:
+    ![Image Alt Text](./documentation/manual.png)
+13. Wait for the completion:
+    ![Image Alt Text](./documentation/wait_completion.png)
+14. Click on "View" to launch the application inside a web page:
+    
 
 ## Credits
 - For colours in terminal, I used [colorama]([https://pypi.org/project/colorama/](https://www.programcreek.com/python/?CodeExample=print+success)https://www.programcreek.com/python/?CodeExample=print+success) and [blessed](https://pypi.org/project/blessed/)
