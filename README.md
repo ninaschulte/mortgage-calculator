@@ -64,7 +64,6 @@ Upon successful validation of the input data, the program presents the user with
 ## Testing
 ### PEP3
 ### Bugs
-### Solved
 #### Validate data on money input fields
 1. I have a code with three money inputs that need to be validated. In my first version of the code, I attempted to validate all three inputs through one while loop. The issue here was that the error messages didn't appear, and in case of an error, the terminal just displayed the same question again.
 ```python
