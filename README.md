@@ -218,6 +218,6 @@ def get_money_info():
 - Typewrite style is covered in this [YouTube tutorial](https://www.youtube.com/watch?v=2h8e0tXHfk0).
 - If statements are explained in the [Python tutorial on if statements](https://docs.python.org/3/tutorial/controlflow.html#if-statements).
 - For space validation, you can refer to the [Python tutorial on strip()](https://docs.python.org/3/library/stdtypes.html#str.strip).
-- For many small details, you might find the [Python W3Schools resource](https://www.w3schools.com/python/) helpful.
+- For many small details, I used also [Python W3Schools resource](https://www.w3schools.com/python/).
 ### Acknowledgements
 I am truly grateful for the unwavering support and valuable feedback provided by my mentor [Julia Konovalova](https://github.com/IuliiaKonovalova) throughout my journey. Julia Konovalova guidance has been instrumental in shaping my growth and progress.
