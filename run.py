@@ -10,14 +10,20 @@ def show_menu():
     In the menu you can see rules and calculatior.
     With "enter", "alt-d", "ctrl-i" you can navigate through the menu.
     """
-    terminal_menu = TerminalMenu(["rules", "calculator"], accept_keys=("enter", "alt-d", "ctrl-i"))
+    terminal_menu = TerminalMenu(
+        ["rules", "calculator"], accept_keys=("enter", "alt-d", "ctrl-i")
+        )
     menu_entry_index = terminal_menu.show()
 
     if menu_entry_index == 0:
-        print("Here are the rules:\n")
         print(
-            "Don´t use special characters.\nType without white space.\nEnter value in €.\n"
+            "Estimate property affordability using this mortgage calculator.\n"
             )
+        print("Here are some rule that you need to follow:\n")
+        print(f"""
+        Please don´t use special characters.\n
+        Please type without space.\n
+        """)
         go_back()
     else:
         main()  
@@ -88,6 +94,7 @@ def validate_age(prompt, min_age, max_age):
         except ValueError:
             print_error("Invalid input. Please enter an integer.\n")
 
+
 def get_age():
     """
     Function to get user input on age and retirement.
@@ -131,8 +138,12 @@ def get_money_info():
     Function to get the user input.
     After that data is validated with the validate_user_input function.
     """
-    salary = validate_user_input("Enter your nett monthly salary(€):\n")
-    expense = validate_user_input("Enter your sum of your disposal income(€):\n")
+    salary = validate_user_input(
+        "Enter your nett monthly salary(€):\n"
+        )
+    expense = validate_user_input(
+        "Enter your sum of your disposal income(€):\n"
+        )
     other_expense = validate_user_input(
         "Enter your sum of other expenses (other loans etc.)(€):\n"
         )
@@ -237,7 +248,7 @@ def main():
         print("Per month you can invest (€):\n", user_monthly_investment)
         user_total_investment = calculator.calculate_total()
         print(
-            "In total you can spend for your new home (€):\n", user_total_investment
+            "Per month you can invest (€):\n", user_total_investment
             )
         user_total_years = calculator.calculate_total_years()
         print("You will pay off in (years):\n", user_total_years)
