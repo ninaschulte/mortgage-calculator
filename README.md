@@ -39,10 +39,19 @@ Calculator return to the user sum
 ## Frameworks/Libraries, Programmes and Tools
 ### Python modules/packages:
 #### Standard library imports:
-
+[os](https://docs.python.org/3/library/os.html) module for various operating system-related tasks.
+#### Third-party imports:
+- [Colorama](https://pypi.org/project/colorama/) used to add colors and styles to the project.
+- [Simple Menu](https://pypi.org/project/simple-term-menu/) was used to implement the menu.
+Other tools:
+- [Codeanywhere]([https://pypi.org/project/colorama/](https://dashboard.codeanywhere.com/)) was used to edit code.
+- [Git](https://git-scm.com/download/mac)Git was used to version control of the website.
+- [Github]([https://pypi.org/project/colorama/](https://github.com/))Github was used to host the code of the website
+- [Heroku]([[https://pypi.org/project/colorama/](https://dashboard.codeanywhere.com/)](https://devcenter.heroku.com/articles/getting-started-with-python#set-up))Heroku was used to deploy the project
 ## Bugs
-### Validate data on money input fields
-I have a code with three money inputs that need to be validated. In my first version of the code, I attempted to validate all three inputs through one while loop. The issue here was that the error messages didn't appear, and in case of an error, the terminal just displayed the same question again.
+### Solved
+#### Validate data on money input fields
+1. I have a code with three money inputs that need to be validated. In my first version of the code, I attempted to validate all three inputs through one while loop. The issue here was that the error messages didn't appear, and in case of an error, the terminal just displayed the same question again.
 ```python
 def get_money_info():
     """
@@ -75,7 +84,7 @@ def get_money_info():
     return salary, expense, other_expense
 
 ```
-Then I started to think about how to solve this, and I created three separate while loops within a single function. This resolved the problem of error messages not displaying. However, according to the best practices that I learned at Code Institute, this wasn't the optimal approach, as it's recommended to have small functions.
+2. Then I started to think about how to solve this, and I created three separate while loops within a single function. This resolved the problem of error messages not displaying. However, according to the best practices that I learned at Code Institute, this wasn't the optimal approach, as it's recommended to have small functions.
 ```python
 def get_money_info():
     """
@@ -127,7 +136,7 @@ def get_money_info():
     print("All your data is valid.")
     return salary, expense, other_expense
 ```
-After that I was trying out different approaches how to make this code shorter and also readable and I created two different functions out of it. 
+3. After that I was trying out different approaches how to make this code shorter and also readable and I created two different functions out of it. 
 ```python
 def validate_user_input(message):
     """Function to validate user data."""
@@ -161,6 +170,12 @@ def get_money_info():
 
     return salary, expense, other_expense
 ```
+## Testing
+## Deployment 
+- The program was deployed to [Heroku]([[https://pypi.org/project/colorama/](https://dashboard.codeanywhere.com/)](https://devcenter.heroku.com/articles/getting-started-with-python#set-up)).
+- The program can be reached by the [link](https://ninaschulte-mortgagecalculator-4bb5d57d1e7f.herokuapp.com/)
+### To deploy the project as an application that can be run locally:
+
 
 ## Credits
 - For colours in terminal, I used [colorama]([https://pypi.org/project/colorama/](https://www.programcreek.com/python/?CodeExample=print+success)https://www.programcreek.com/python/?CodeExample=print+success) and [blessed](https://pypi.org/project/blessed/)
