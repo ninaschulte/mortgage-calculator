@@ -45,7 +45,6 @@ Calculator return to the user sum
 - [Simple Menu](https://pypi.org/project/simple-term-menu/) was used to implement the menu.
 Other tools:
 - [Codeanywhere]([https://pypi.org/project/colorama/](https://dashboard.codeanywhere.com/)) was used to edit code.
-- [Git](https://git-scm.com/download/mac)Git was used to version control of the website.
 - [Github]([https://pypi.org/project/colorama/](https://github.com/))Github was used to host the code of the website
 - [Heroku]([[https://pypi.org/project/colorama/](https://dashboard.codeanywhere.com/)](https://devcenter.heroku.com/articles/getting-started-with-python#set-up))Heroku was used to deploy the project
 ## Bugs
@@ -174,7 +173,10 @@ def get_money_info():
 ## Deployment 
 - The program was deployed to [Heroku]([[https://pypi.org/project/colorama/](https://dashboard.codeanywhere.com/)](https://devcenter.heroku.com/articles/getting-started-with-python#set-up)).
 - The program can be reached by the [link](https://ninaschulte-mortgagecalculator-4bb5d57d1e7f.herokuapp.com/)
-### To deploy the project as an application that can be run locally:
+### Steps 
+1. Create a list of requirements that project needs to run (all the imports). Run command "Pip3 freeze > requirements.txt".
+2. Save and push to github.
+3. 
 
 
 ## Credits
