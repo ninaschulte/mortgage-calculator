@@ -32,7 +32,7 @@ def show_menu():
 
 
 def go_back():
-    """Function that simply return user to the menu."""
+    """Function that return user to the menu."""
     terminal_menu = TerminalMenu(
         ["go back"], accept_keys=("enter", "alt-d", "ctrl-i")
         )
