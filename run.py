@@ -55,10 +55,10 @@ def print_success(message):
     print(Fore.GREEN + message + Style.RESET_ALL)
 
 
-def validate_age(prompt):
+def validate_age(prompt, min_age, max_age):
     """
     Validate data for age and retirement age.
-    User must be above 18.
+    User must be within the specified age range.
     User should not enter any space before and after.
     User should only enter int and not string data.
     """
@@ -72,22 +72,21 @@ def validate_age(prompt):
 
         try:
             age = int(age_input_stripped)
-            if 18 <= age <= 122:
+            if min_age <= age <= max_age:
                 print_success("Your age is valid.\n")
                 return age
             else:
-                print_error("Your age must be above 18 and less then 122.\n")
+                print_error(f"Your age must be between {min_age} and {max_age}.\n")
         except ValueError:
             print_error("Invalid input. Please enter an integer.\n")
-
 
 def get_age():
     """
     Function to get user input on age and retirement.
     Above function then validates this data.
     """
-    age_data = validate_age("Enter your age:\n")
-    age_retirement = validate_age("Enter your retirement age:\n")
+    age_data = validate_age("Enter your age (must be above 18):\n", 18, 122)
+    age_retirement = validate_age("Enter your retirement age (must be above 40):\n", 40, 122)
 
     print_success("All your data is valid.\n")
     return age_data, age_retirement
@@ -188,10 +187,10 @@ def main():
     This is the main function that gets all 
     the validated and calculated data in the end.
     """
-    user_age = validate_age("Enter your age(must be above 18):\n")
+    user_age = validate_age("Enter your age(must be above 18):\n", 18, 122)
     print("Your age:\n", user_age)
 
-    user_retirement_age = validate_age("Enter your retirement age:\n")
+    user_retirement_age = validate_age("Enter your retirement age:\n", 40, 122)
     print("Your retirement age:\n", user_retirement_age)
 
     user_salary, user_expense, user_other_expense = get_money_info()
