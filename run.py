@@ -149,6 +149,7 @@ def get_money_info():
         )
 
     if expense + other_expense > salary:
+        return salary, expense, other_expense
     return salary, expense, other_expense
 
 
