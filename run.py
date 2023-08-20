@@ -19,10 +19,11 @@ def show_menu():
         print(
             "Estimate property affordability using this mortgage calculator.\n"
             )
-        print("Here are some rule that you need to follow:\n")
+        print("Here are some rules that you need to follow:\n")
         print(f"""
         Please don´t use special characters.\n
         Please type without space.\n
+        You must be at leat 18 years old.\n
         """)
         go_back()
     else:
