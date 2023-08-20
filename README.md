@@ -190,7 +190,7 @@ def get_money_info():
 ### Steps launch the application
 1. In Codeanywhere, create a list of requirements.txt that project needs to run (all the imports). Run command "Pip3 freeze > requirements.txt". 
 2. Save changes and with command git push, push the files to your repository.
-3. Create a Heroku account [Heroku](https://dashboard.heroku.com/account).
+3. Create a [Heroku](https://dashboard.heroku.com/account) account.
 4. Create a new Heroku application on the following page [Heroku - new app](https://dashboard.heroku.com/apps):
    ![Image Alt Text](./documentation/new_app.png)
 5. Tap on deploy:
