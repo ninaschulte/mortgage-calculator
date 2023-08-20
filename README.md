@@ -21,9 +21,11 @@ The flowchart represents the logic of the application:
 ### Welcome message
 Welcome message with some basic rules, what kind of data will be only accepted for further calculations.
 ![Image Alt Text](./documentation/welcome.png)
-### Rulea
+### Rules
 Explain to the customer what is this program about and a set of rules.
 ![Image Alt Text](./documentation/rules.png)
+### Go back button
+Go back button is present on rules screen and also once user complete the calculator. This button return user to the first page, where user can select again between rules and calculator.
 ### Age input and Age retirement input
 Calculator ask users to add age and retirement age
 ![Image Alt Text](./documentation/age_val.png)
