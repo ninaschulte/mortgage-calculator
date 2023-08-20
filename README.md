@@ -8,12 +8,12 @@ Here you can view the project. [LINK](https://ninaschulte-mortgagecalculator-4bb
 ## User stories
 | ID | User Stories |
 |----|--------------|
-| 1  | As a user, I want to see a welcome message so that I know the purpose of this program. |
-| 2  | As a user, I want to see rules, so that I can decide whether to continue with my calculations. |
-| 3  | As a user, I want to see where I can start with my mortgage calculator. |
-| 4  | As a user, I want to see an error message when my input is incorrect. |
-| 5  | As a user, I want to see a success message when my data is valid. |
-| 6  | As a user, I want to see final calculations so that I understand how much money I can invest. |
+| 1 | As a user, I wish to view a welcome message to understand the purpose of this program. |
+| 2 | As a user, I desire to access rules to make an informed decision about proceeding with my calculations. |
+| 3 | As a user, I aim to find a clear starting point for utilizing the mortgage calculator. |
+| 4 | As a user, I expect to receive an error message when my input contains mistakes. |
+| 5 | As a user, I anticipate receiving a success message when my entered data is valid. |
+| 6 | As a user, I would like to see final calculations in order to comprehend the potential investment amount. |
 ## Flowchart
 The flowchart represents the logic of the application:
 ![Image Alt Text](./documentation/flowchart.png)
@@ -35,9 +35,9 @@ The calculator also prompts users for three additional inputs: salary, regular e
 ### Result
 Upon successful validation of the input data, the program presents the user with a results page displaying three calculated values:
 
-The monthly amount available for investment.
-The total investment amount over the years (calculated as user's salary minus the sum of all expenses).
-The number of years required to pay off this investment (calculated as (retirement age - user age) * 12) * monthly amount.
+- The monthly amount available for investment.
+- The total investment amount over the years (calculated as user's salary minus the sum of all expenses).
+- The number of years required to pay off this investment (calculated as (retirement age - user age) * 12) * monthly amount.
   
 ![Image Alt Text](./documentation/result.png)
 ## Technologies Used
@@ -58,7 +58,9 @@ Other tools:
 - [Codeanywhere]([https://pypi.org/project/colorama/](https://dashboard.codeanywhere.com/)) was used to edit code.
 - [Github]([https://pypi.org/project/colorama/](https://github.com/))Github was used to host the code of the website
 - [Heroku]([[https://pypi.org/project/colorama/](https://dashboard.codeanywhere.com/)](https://devcenter.heroku.com/articles/getting-started-with-python#set-up))Heroku was used to deploy the project
-## Bugs
+## Testing
+### PEP3
+### Bugs
 ### Solved
 #### Validate data on money input fields
 1. I have a code with three money inputs that need to be validated. In my first version of the code, I attempted to validate all three inputs through one while loop. The issue here was that the error messages didn't appear, and in case of an error, the terminal just displayed the same question again.
@@ -180,14 +182,13 @@ def get_money_info():
 
     return salary, expense, other_expense
 ```
-## Testing
 ## Deployment 
 - The program was deployed to [Heroku]([[https://pypi.org/project/colorama/](https://dashboard.codeanywhere.com/)](https://devcenter.heroku.com/articles/getting-started-with-python#set-up)).
 - The program can be reached by the [link](https://ninaschulte-mortgagecalculator-4bb5d57d1e7f.herokuapp.com/)
 ### Steps 
-1. Create a list of requirements that project needs to run (all the imports). Run command "Pip3 freeze > requirements.txt".
+1. Create a list of requirements.txt that project needs to run (all the imports). Run command "Pip3 freeze > requirements.txt".
 2. Save and push to github.
-3. 
+3. Open account at Haroku
 
 
 ## Credits
