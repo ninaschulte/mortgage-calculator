@@ -14,6 +14,9 @@ Here you can view the project. [LINK](https://ninaschulte-mortgagecalculator-4bb
 | 4  | As a user, I want to see an error message when my input is incorrect. |
 | 5  | As a user, I want to see a success message when my data is valid. |
 | 6  | As a user, I want to see final calculations so that I understand how much money I can invest. |
+## Flowchart
+The flowchart represents the logic of the application:
+![Image Alt Text](./documentation/flowchart.png)
 ## Features
 ### Welcome message
 Welcome message with some basic rules, what kind of data will be only accepted for further calculations.
