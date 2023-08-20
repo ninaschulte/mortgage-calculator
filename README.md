@@ -35,6 +35,7 @@ Once your data are validated, result page is presented to the user with three ca
 - your monthly amount that you can spend on investment,
 - total investement through out all the years,
 - in how many years you you will pay off this amount.
+  
 ![Image Alt Text](./documentation/result.png)
 ## Technologies Used
 ### Languages:
