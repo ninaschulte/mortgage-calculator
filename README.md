@@ -17,10 +17,13 @@ Here you can view the project. [LINK](https://ninaschulte-mortgagecalculator-4bb
 ## Features
 ### Welcome message
 Welcome message with some basic rules, what kind of data will be only accepted for further calculations.
+![Image Alt Text](./documentation/welcome.png)
 ### Age input and Age retirement input
 Calculator ask users to add age and retirement age
+![Image Alt Text](./documentation/validation.png)
 ### Salary, expenses and other expenses input
 Calculator ask users for three additional inputs: salary, expenses and other expenses input.
+![Image Alt Text](./documentation/error.png)
 ### Outcome result
 Calculator return to the user sum
 
