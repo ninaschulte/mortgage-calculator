@@ -1,12 +1,15 @@
+import os,time,sys
 from simple_term_menu import TerminalMenu
 from colorama import Fore, Back, Style, init
-import os,time,sys
 import emoji
-from blessed import Terminal
-term = Terminal()
 
 
 def show_menu():
+    """
+    Function that shows the menu.
+    In the menu you can see rules and calculatior.
+    With "enter", "alt-d", "ctrl-i" you can navigate through the menu.
+    """
     terminal_menu = TerminalMenu(["rules", "calculator"], accept_keys=("enter", "alt-d", "ctrl-i"))
     menu_entry_index = terminal_menu.show()
 
@@ -14,11 +17,9 @@ def show_menu():
         print("Here are the rules:\n")
         print("Don´t use special characters.\nType without white space.\nEnter value in €.\n")
         go_back()
-    elif menu_entry_index == 1:
+    else:
         main()  
         go_back()
-    else:
-        print("Exit")
 
 
 def go_back():
@@ -93,7 +94,11 @@ def get_age():
 
 
 def validate_user_input(message):
-    """Function to validate user data."""
+    """
+    Function to validate user data.
+    Return error in case of space, special character.
+    Return valid in case of int.
+    """
     while True:
         user_input = input(message)
         user_stripped = user_input.strip()
@@ -194,8 +199,15 @@ def main():
     print("User's expenses(€):\n", user_expense)
     print("User's other expenses(€):\n", user_other_expense)
 
-    if user_salary is not None and (user_expense + user_other_expense) <= user_salary:
-        calculator = Calculator(user_age, user_retirement_age, user_salary, user_expense, user_other_expense)
+    if user_salary is not None and (
+        user_expense + user_other_expense) 
+        <= user_salary:
+        calculator = Calculator(
+            user_age, 
+            user_retirement_age, 
+            user_salary, user_expense, 
+            user_other_expense
+        )
         user_monthly_investment = calculator.calculate_month()
         print("Per month you can invest (€):\n", user_monthly_investment)
         user_total_investment = calculator.calculate_total()
@@ -204,6 +216,7 @@ def main():
         print("You will pay off in (years):\n", user_total_years)
     else:
         print_error("Sorry, you can't afford to buy anything. 😐\n")
+
 
 welcome_message()
 show_menu()
