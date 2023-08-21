@@ -229,7 +229,7 @@ def main():
 
     user_sal, user_exp, user_other_exp = get_money_info()
     print("Your salary (€):\n", user_sal)
-    print("Sum of your disposal income (€):\n", user_exp)
+    print("Sum of your disposable income (€):\n", user_exp)
     print("Your other expenses (€):\n", user_other_exp)
 
     if user_sal is not None and (user_exp + user_other_exp) <= user_sal:
