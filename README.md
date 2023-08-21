@@ -62,6 +62,10 @@ Upon successful validation of the input data, the program presents the user with
 - [GitHub](https://github.com/) was used to host the website's code.
 - [Heroku](https://devcenter.heroku.com/articles/getting-started-with-python#set-up) was used to deploy the project.
 ## Testing
+### PEP3
+The code was tested with PEP3 [PEP3](https://pep8ci.herokuapp.com/). This checking was done manually by copying python code and pasting it into the validator.
+No errore were found:
+![Image Alt Text](./documentation/pep.png)
 ### Manual testing
 | Test Scenario | Pass/Fail |
 |---------------|-----------|
@@ -75,7 +79,6 @@ Upon successful validation of the input data, the program presents the user with
 | Tap the "go back" button and click on "calculator." | Pass |
 | Test for errors: enter input with space, special character; for age, validate the age and confirm that the view displays data as not valid in red. | Pass |
 | Also, enter expenses greater than salary and observe the view showing an error that you can't afford anything. | Pass |
-### PEP3
 ### Bugs
 #### Validate data on money input fields
 1. I have a code with three money inputs that need to be validated. In my first version of the code, I attempted to validate all three inputs through one while loop. The issue here was that the error messages didn't appear, and in case of an error, the terminal just displayed the same question again.
@@ -235,7 +238,7 @@ def get_money_info():
 - For validating [Python tutorials on Errors](https://docs.python.org/3/tutorial/errors.html) and a helpful [YouTube tutorial](https://www.youtube.com/watch?v=LUWyA3m_-r0&t=644s).
 - Typewrite style is covered in this [YouTube tutorial](https://www.youtube.com/watch?v=2h8e0tXHfk0).
 - If statements are explained in the [Python tutorial on if statements](https://docs.python.org/3/tutorial/controlflow.html#if-statements).
-- For space validation, you can refer to the [Python tutorial on strip()](https://docs.python.org/3/library/stdtypes.html#str.strip).
+- For space validation, I refer to the [Python tutorial on strip()](https://docs.python.org/3/library/stdtypes.html#str.strip).
 - For many small details, I used also [Python W3Schools resource](https://www.w3schools.com/python/).
 ### Acknowledgements
 - I am truly grateful for the unwavering support and valuable feedback provided by my mentor [Julia Konovalova](https://github.com/IuliiaKonovalova) throughout my journey. Julia Konovalova guidance has been instrumental in shaping my growth and progress.
