@@ -1,4 +1,7 @@
-import os, time, sys
+
+import os
+import time
+import sys
 from simple_term_menu import TerminalMenu
 from colorama import Fore, Back, Style, init
 import emoji
@@ -27,7 +30,7 @@ def show_menu():
         """)
         go_back()
     else:
-        main()  
+        main()
         go_back()
 
 
@@ -155,12 +158,12 @@ def get_money_info():
 
 class Calculator:
     """
-    This class consists of all calculations 
-    needed to give the user result. 
-    Consists of several methods 
+    This class consists of all calculations
+    needed to give the user result.
+    Consists of several methods
     __init__ and some other math methods.
     """
-    
+
     def __init__(self, user_a, user_ret_a, user_sal, user_exp, user_other_exp):
         self.user_a = user_a  # user age
         self.user_ret_a = user_ret_a  # user retirement age
@@ -211,7 +214,7 @@ def welcome_message():
 
 def main():
     """
-    This is the main function that gets all 
+    This is the main function that gets all
     the validated and calculated data in the end.
     """
     user_a = validate_age(
@@ -232,12 +235,12 @@ def main():
     if user_sal is not None and (user_exp + user_other_exp) <= user_sal:
 
         calculator = Calculator(
-            user_a, 
-            user_ret_a, 
-            user_sal, user_exp, 
+            user_a,
+            user_ret_a,
+            user_sal, user_exp,
             user_other_exp
         )
-        user_monthly_investment = calculator.calculate_month()         
+        user_monthly_investment = calculator.calculate_month()
         print("Per month you can invest (€):\n", user_monthly_investment)
         user_total_investment = calculator.calculate_total()
         print(
