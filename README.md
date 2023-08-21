@@ -40,11 +40,11 @@ Upon successful validation of the input data, the program presents the user with
 ![Image Alt Text](./documentation/result.png)
 ## Technologies Used
 ### Languages:
-- Python: serves as the project's foundation, guiding and shaping all aspects of the application's behavior.
+- [Python]([https://docs.python.org/3/library/os.html](https://www.python.org/downloads/release/python-385/)): serves as the project's foundation, guiding and shaping all aspects of the application's behavior.
 
-- JavaScript: contributes the essential start script, enabling the execution of the Code Institute's mock terminal within the browser environment.
+- [JavaScript]([https://docs.python.org/3/library/os.html](https://www.javascript.com/)): contributes the essential start script, enabling the execution of the Code Institute's mock terminal within the browser environment.
 
-- HTML: employed in crafting the fundamental elements integral to constructing the simulated terminal experience within the browser.
+- [HTML]([[https://docs.python.org/3/library/os.html](https://www.javascript.com/)](https://developer.mozilla.org/en-US/docs/Web/HTML)): employed in crafting the fundamental elements integral to constructing the simulated terminal experience within the browser.
 ## Frameworks/Libraries, Programmes and Tools
 ### Python modules/packages:
 #### Standard library imports:
