@@ -63,8 +63,8 @@ Upon successful validation of the input data, the program presents the user with
 - [Heroku](https://devcenter.heroku.com/articles/getting-started-with-python#set-up) was used to deploy the project.
 ## Testing
 ### PEP3
-The code was tested with PEP3 [PEP3](https://pep8ci.herokuapp.com/). This checking was done manually by copying python code and pasting it into the validator.
-No errore were found:
+The code was tested with [PEP3](https://pep8ci.herokuapp.com/). This checking was done manually by copying python code and pasting it into the validator.
+No errors were found:
 ![Image Alt Text](./documentation/pep.png)
 ### Manual testing
 | Test Scenario | Pass/Fail |
