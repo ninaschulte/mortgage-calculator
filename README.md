@@ -51,8 +51,8 @@ Upon successful validation of the input data, the program presents the user with
 ### Python modules/packages:
 #### Standard library imports:
 - [os](https://docs.python.org/3/library/os.html) module for various operating system-related tasks.
-- [time](https://docs.python.org/3/library/time.html) this module provides various time-related functions.
-- [sys](https://docs.python.org/3/library/sys.html) this module provides access to some variables used or maintained by the interpreter and to functions that interact strongly with the interpreter.
+- [time](https://docs.python.org/3/library/time.html) this module was imported for timewriter functionality of the welcome text.
+- [sys](https://docs.python.org/3/library/sys.html) this module was imported for timewriter functionality of the welcome text.
 #### Third-party imports:
 - [Colorama](https://pypi.org/project/colorama/) was used to add colors and styles to the project.
 - [Simple Menu](https://pypi.org/project/simple-term-menu/) was used to implement the menu.
