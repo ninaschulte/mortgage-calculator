@@ -1,6 +1,6 @@
 # Mortgage Calculator
 
-This is a mortgage calculator that estimates the amount of money you can afford to spend or borrow as a loan. Here you can view the project [LINK](https://ninaschulte-mortgagecalculator-4bb5d57d1e7f.herokuapp.com/).
+This is a mortgage calculator that estimates the amount of money you can afford to spend or borrow as a loan. Calculations are done based on user input: age, retirement age, salary, disposal income and other expenses. Here you can view the project [LINK](https://ninaschulte-mortgagecalculator-4bb5d57d1e7f.herokuapp.com/).
 
 *Please note that these calculations are simplified and a real mortgage calculator would need to consider additional factors, such as taxes and fees.
 ## User stories
