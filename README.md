@@ -24,8 +24,14 @@ An explanation to the user about the purpose of the program and a set of accompa
 ![Image Alt Text](./documentation/rules.png)
 ### Go back button
 A "Go back" button is provided on both the rules screen and upon completing the calculator. This button returns the user to the initial page, where they can choose between rules and the calculator.
-### Age input and Age retirement input
-The calculator prompts users to enter their current age and retirement age.
+### User input
+The calculator prompts users to input their current age, retirement age, salary, disposable income, and other expenses. The calculator validates the data, and the data is considered invalid in the following cases:
+
+- If there's a space before or after the user input.
+- If there's a special character or any non-integer value.
+- For age input, there's also an age validation ensuring the user is at least 18 years old and cannot retire before the age of 40.
+
+The application provides user feedback when the data is found to be invalid, as well as when the data is valid. Refer to the details in the screenshot below.
 ![Image Alt Text](./documentation/age_val.png)
 ### Salary, expenses and other expenses input
 The calculator also prompts users for three additional inputs: salary, regular expenses, and other expenses. If the total expenses exceed the user's salary, the program returns an error indicating that the user cannot afford to buy a property.
