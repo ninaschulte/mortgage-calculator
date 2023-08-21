@@ -17,7 +17,7 @@ The flowchart represents the logic of the application:
 ![Image Alt Text](./documentation/flowchart.png)
 ## Features
 ### Welcome message
-A welcome message displays basic rules regarding the accepted data for further calculations.
+A welcome message display two emojis and text in typewriter style. It also display menu where user can choose between rules and calculator.
 ![Image Alt Text](./documentation/welcome.png)
 ### Rules
 An explanation to the user about the purpose of the program and a set of accompanying rules.
